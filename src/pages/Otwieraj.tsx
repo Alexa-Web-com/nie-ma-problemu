@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
-import SectionHeader from "@/components/SectionHeader";
+
 import { ArrowRight } from "lucide-react";
 import heroDoors from "@/assets/hero-doors.png";
 import doorsHidden from "@/assets/doors-hidden.jpg";
