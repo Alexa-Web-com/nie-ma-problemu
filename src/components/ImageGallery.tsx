@@ -1,0 +1,189 @@
+import { useState, useRef, useCallback, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
+
+import { ArrowLeft, ArrowRight, X, DoorClosed } from "lucide-react";
+import Layout from "./Layout";
+import { cn, extractImageNameFromPath } from "../lib/utils";
+
+const minSwipeDistance = 50;
+
+const ImageGallery = ({images}: {images: string[]}) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const [searchParams] = useSearchParams();
+  const hint = searchParams.get("hint") ?? ""; // e.g., "klamki"
+
+  const [galleryImages, setGalleryImages] = useState<string[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
+
+  useEffect(() => {
+    setGalleryImages(images);
+  }, [hint]); // dependencies in case we want to reload images on param change
+
+  const goToPrevious = useCallback(() => {
+    setCurrentIndex((prev) =>
+      prev === 0 ? galleryImages.length - 1 : prev - 1,
+    );
+  }, [galleryImages.length]);
+
+  const goToNext = useCallback(() => {
+    setCurrentIndex((prev) =>
+      prev === galleryImages.length - 1 ? 0 : prev + 1,
+    );
+  }, [galleryImages.length]);
+
+  const goToImage = (index: number) => {
+    setCurrentIndex(index);
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchEndX.current = null;
+    touchStartX.current = e.targetTouches[0].clientX;
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+
+    const distance = touchStartX.current - touchEndX.current;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      goToNext();
+    } else if (isRightSwipe) {
+      goToPrevious();
+    }
+  };
+
+  const handleKeyDown = useCallback(
+    (e: React.KeyboardEvent) => {
+      if (e.key === "ArrowLeft") {
+        goToPrevious();
+      } else if (e.key === "ArrowRight") {
+        goToNext();
+      } else if (e.key === "Escape") {
+        navigate(location.pathname.split("/").slice(0, -1).join("/"));
+      }
+    },
+    [goToPrevious, goToNext, navigate, location.pathname],
+  );
+
+  return (
+    <Layout>
+      <div
+        className="min-h-screen bg-background py-8 px-4"
+        onKeyDown={handleKeyDown}
+        tabIndex={0}
+      >
+        {/* Fixed Close Button */}
+        <button
+          onClick={() => navigate(location.pathname.split("/").slice(0, -1).join("/"))}
+          className="fixed top-24 right-4 md:right-8 z-50 flex items-center gap-2 bg-background/80 backdrop-blur-sm text-muted-foreground hover:text-foreground hover:bg-background px-2 md:px-3 py-2 rounded-full shadow-lg transition-colors"
+        >
+          <X className="w-5 h-5" />
+          <span className="hidden sm:inline">Zamknij</span>
+        </button>
+
+        {/* Fixed Hint Button */}
+        {hint === "klamki" && (
+          <button
+            onClick={() => navigate("/otwieraj/otwieraj-galeria-5")}
+            className="fixed bottom-4 right-4 md:right-8 z-50 flex items-center gap-2 bg-background/80 backdrop-blur-sm text-primary hover:text-foreground hover:bg-background px-3 py-2 rounded-full shadow-lg transition-colors"
+          >
+            <DoorClosed className="w-5 h-5" />
+            <span>Pamiętaj o klamkach</span>
+          </button>
+        )}
+
+        <div className="container-custom">
+          {/* Main Image Display */}
+          <div className="relative mb-6">
+            <div
+              className="relative aspect-[16/10] md:aspect-[16/9] w-full overflow-hidden rounded-lg bg-muted"
+              onTouchStart={onTouchStart}
+              onTouchMove={onTouchMove}
+              onTouchEnd={onTouchEnd}
+            >
+              <img
+                src={galleryImages[currentIndex]}
+                alt={extractImageNameFromPath(galleryImages[currentIndex])}
+                className="w-full h-full object-cover transition-opacity duration-300"
+              />
+
+              {/* Image Title Overlay */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 md:p-6">
+                <p className="text-white/80 text-sm mt-1">
+                  {currentIndex + 1} / {galleryImages.length}
+                </p>
+              </div>
+
+              {/* Navigation Arrows */}
+              <button
+                onClick={goToPrevious}
+                className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-foreground p-2 md:p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110"
+                aria-label="Poprzednie zdjęcie"
+              >
+                <ArrowLeft className="w-5 h-5 md:w-6 md:h-6" />
+              </button>
+
+              <button
+                onClick={goToNext}
+                className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-foreground p-2 md:p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110"
+                aria-label="Następne zdjęcie"
+              >
+                <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
+              </button>
+            </div>
+
+            {/* Swipe hint for mobile */}
+            <p className="text-center text-muted-foreground text-sm mt-2 md:hidden">
+              Przesuń palcem, aby zmienić zdjęcie
+            </p>
+          </div>
+
+          {/* Thumbnails */}
+          <div className="grid grid-cols-5 gap-2 md:gap-4">
+            {galleryImages.map((image, index) => (
+              <button
+                key={index}
+                onClick={() => goToImage(index)}
+                className={cn(
+                  "relative aspect-square overflow-hidden rounded-md transition-all duration-200",
+                  currentIndex === index
+                    ? "ring-2 ring-primary ring-offset-2 ring-offset-background opacity-100"
+                    : "opacity-60 hover:opacity-100",
+                )}
+                aria-label={`Pokaż ${image}`}
+                aria-current={currentIndex === index ? "true" : "false"}
+              >
+                <img
+                  src={image}
+                  alt={extractImageNameFromPath(image)}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+            ))}
+          </div>
+
+          {/* Keyboard navigation hint */}
+          <p className="text-center text-muted-foreground text-sm mt-6 hidden md:block">
+            Użyj strzałek ← → do nawigacji, ESC aby zamknąć
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+};
+
+export default ImageGallery;

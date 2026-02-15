@@ -1,0 +1,170 @@
+import { Link } from "react-router-dom";
+import Layout from "@/components/Layout";
+import SectionHeader from "@/components/SectionHeader";
+import { ArrowRight, Shield, Award, Users } from "lucide-react";
+import heroHome from "@/assets/hero-home.png";
+import heroDoors from "@/assets/hero-doors.png";
+import heroDecoration from "@/assets/hero-decoration.png";
+import heroRealizations from "@/assets/hero-realizations.jpg";
+import heroFloors from "@/assets/hero-floors.jpg";
+import BaseSection from "@/components/BaseSection";
+import PageHero from "@/components/PageHero";
+
+const sectionData = [
+  {
+    baseImage: heroDoors,
+    altImage: "Drzwi i klamki",
+    isImageLeft: true,
+    surtitle: "Otwieraj",
+    title: "Drzwi i klamki",
+    description:
+      "Zobacz nowoczesne i klasyczne drzwi wewnętrzne, w tym systemy z ukrytą ościeżnicą, drzwi szklane i efektowene rozwiązania lustrzane. Dobierz stylowe klamki, które dopełnią całość.",
+    goToSectionName: "Sprawdź ofertę",
+    goToSectionURL: "/otwieraj",
+  },
+  {
+    baseImage: heroDecoration,
+    altImage: "Tapety i dekoracje",
+    isImageLeft: false,
+    surtitle: "Dekoruj",
+    title: "Tapety, podłogi, sztukateria",
+    description:
+      "Zobacz nowoczesne i klasyczne drzwi wewnętrzne, w tym systemy z ukrytą ościeżnicą, drzwi szklane i efektowene rozwiązania lustrzane. Dobierz stylowe klamki, które dopełnią całość.",
+    goToSectionName: "Sprawdź ofertę",
+    goToSectionURL: "/dekoruj",
+  },
+  {
+    baseImage: heroRealizations,
+    altImage: "przykładowa realizacja",
+    isImageLeft: true,
+    surtitle: "Oglądaj",
+    title: "Nasze realizacje",
+    description:
+      "Przekonaj się, jak wybrane przez nas drzwi, podłogi i detale wykończeniowe prezentują się w rzeczywistych wnętrzach. Odkryj różnorodność stylów – od nowoczesnego minimalizmu po klasyczną elegancję – i zobacz jakość naszych montaży w praktyce.",
+    goToSectionName: "Zobacz galerię",
+    goToSectionURL: "/ogladaj",
+  },
+  {
+    baseImage: heroFloors,
+    altImage: "Podłogi",
+    isImageLeft: false,
+    surtitle: "Trzymaj poziom",
+    title: "Dla wykonawców",
+    description:
+      "Profesjonalne systemy poziomowania, narzędzia i materiały ułatwiające prace remontowe. Sprawdzone rozwiązania dla fachowców.",
+    goToSectionName: "Sprawdź",
+    goToSectionURL: "/trzymaj-poziom",
+  },
+];
+
+const Index = () => {
+  return (
+    <Layout>
+      {/* Hero Section */}
+      <PageHero
+        title={`Tworzymy piękne \n i funkcjonalne wnętrza`}
+        subtitle="Drzwi, podłogi, tapety i sztukateria z montażem"
+        backgroundImage={heroHome}
+        ctaButtonText="Skontaktuj się"
+        ctaLinkURL="/kontakt"
+        introSurtitle="Masz wnętrze do wykończenia?"
+        introTitle="Nie ma problemu!"
+        introOne="Doradzamy, dostarczamy i montujemy – kompleksowo i z dbałością o
+              każdy detal. Działamy mobilnie – dojeżdżamy na miejsce budowy."
+      />
+
+      {/* Services Preview */}
+      <section className="section-padding bg-section-alt">
+        <div className="container-custom">
+          {sectionData.map((section, index) => (
+            <BaseSection
+              key={index}
+              baseImage={section.baseImage}
+              altImage={section.altImage}
+              isImageLeft={section.isImageLeft}
+              surtitle={section.surtitle}
+              title={section.title}
+              description={section.description}
+              goToSectionName={section.goToSectionName}
+              goToSectionURL={section.goToSectionURL}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="section-padding bg-card">
+        <div className="container-custom">
+          <SectionHeader title="Dlaczego warto z nami pracować?" centered />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
+            <div className="text-center p-8">
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                <Shield className="w-8 h-8 text-accent" />
+              </div>
+              <h3 className="text-xl font-sansTitle font-semibold mb-4">
+                Kompleksowe wsparcie
+              </h3>
+              <p className="text-muted-foreground text-sm">
+                Doradzamy, dostarczamy i montujemy – bez przerzucania
+                odpowiedzialności. Jesteśmy z Tobą od pierwszego pomiaru aż po
+                montaż, szukając najlepszych rozwiązań na każdym etapie
+                realizacji.
+              </p>
+            </div>
+
+            <div className="text-center p-8">
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                <Award className="w-8 h-8 text-accent" />
+              </div>
+              <h3 className="text-xl font-sansTitle font-semibold mb-4">
+                Doświadczenie i elastyczność
+              </h3>
+              <p className="text-muted-foreground text-sm">
+                Od lat współpracujemy z profesjonalnymi wykonawcami i wiemy, jak
+                ważna jest komunikacja i szybka reakcja na zmiany. Znamy realia
+                budowy i potrafimy dostosować się do sytuacji.
+              </p>
+            </div>
+
+            <div className="text-center p-8">
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                <Users className="w-8 h-8 text-accent" />
+              </div>
+              <h3 className="text-xl font-sansTitle font-semibold mb-4">
+                Indywidualne podejście
+              </h3>
+              <p className="text-muted-foreground text-sm">
+                Nie jesteśmy dużą siecią, dzięki czemu możemy zaopiekować się
+                każdym klientem. Masz bezpośredni kontakt z osobą odpowiedzialną
+                za projekt i pewność ze nikt nie zostawi Cię z problemem.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="section-padding bg-primary">
+        <div className="container-custom text-center">
+          <h2 className="text-3xl md:text-4xl font-sansTitle font-semibold text-primary-foreground mb-6">
+            Stwórzmy razem przestrzeń, o której marzysz!
+          </h2>
+          <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+            Skontaktuj się z nami i rozpocznij transformację swojego wnętrza już
+            dziś.
+          </p>
+          <Link
+            to="/kontakt"
+            className="inline-flex items-center gap-2 bg-card text-foreground hover:bg-card/90 px-8 py-4 rounded-md font-medium transition-all duration-200"
+          >
+            Skontaktuj się
+            <ArrowRight className="w-5 h-5" />
+          </Link>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default Index;
