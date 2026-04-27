@@ -11,8 +11,9 @@ import BaseSection from "@/components/BaseSection";
 
 const keepStandards = [
   {
-    title: "Trzymaj poziom 1",
-    description: "Opis do Trzymaj poziom 1",
+    title: "Nowoczesne systemy płyt i chemii budowlanej",
+    description:
+      "Systemowe i modułowe rozwiązania dające niemal nieograniczone możliwości aranżacyjne, będące jednocześnie szybkie i łatwe w montażu. Oferujemy sprawdzone produkty wysokiej jakości, dzięki którym realizacja odbędzie się bezproblemowo i w terminie.",
     baseImage: floor1,
     altImage: "alt", //TODO: add alt text
     isImageLeft: true,
@@ -20,8 +21,9 @@ const keepStandards = [
     goToSectionURL: "/trzymaj-poziom/trzymaj-poziom-galeria-1",
   },
   {
-    title: "Trzymaj poziom 2",
-    description: "Opis do Trzymaj poziom 2",
+    title: "Narzędzia do cięcia i obróbki płytek",
+    description:
+      "Precyzyjny system do poziomowania płytek, solidne systemy do przenoszenia płyt wielkoformatowych oraz stoły glazurnicze to narzędzia, dzięki którym nadążysz za potrzebami klientów i za terminami. Te produkty doceniło już wielu fachowców, wypróbuj i zauważ różnicę.",
     baseImage: floor2,
     altImage: "alt", //TODO: add alt text
     isImageLeft: false,
@@ -29,22 +31,14 @@ const keepStandards = [
     goToSectionURL: "/trzymaj-poziom/trzymaj-poziom-galeria-2",
   },
   {
-    title: "Trzymaj poziom 3",
-    description: "Opis do Trzymaj poziom 3",
+    title: "Systemy grzewcze do łazienek i SPA",
+    description:
+      "Wychodząc naprzeciw oczekiwaniom rynku, oferujemy elektryczne maty grzewcze, które zapewnią komfort klientom, łatwość montażu wykonawcom oraz nieograniczone możliwości aranżacyjne projektantom. To nie tylko ogrzewanie podłogowe, ale również m.in. podgrzewane siedziska, ściany i odparowywacze luster.",
     baseImage: floor3,
     altImage: "alt", //TODO: add alt text
     isImageLeft: true,
     goToSectionName: "Zobacz galerię",
     goToSectionURL: "/trzymaj-poziom/trzymaj-poziom-galeria-3",
-  },
-  {
-    title: "Trzymaj poziom 4",
-    description: "Opis do Trzymaj poziom 4",
-    baseImage: floor4,
-    altImage: "alt", //TODO: add alt text
-    isImageLeft: false,
-    goToSectionName: "Zobacz galerię",
-    goToSectionURL: "/trzymaj-poziom/trzymaj-poziom-galeria-4",
   },
 ];
 
@@ -56,12 +50,8 @@ const TrzymajPoziom = () => {
         subtitle="Sprawdzone rozwiązania dla fachowców"
         backgroundImage={heroFloors}
         isBacgkgroundForTextDark={true}
-        introTitle="Tytuł do Trzymaj Poziom"
-        introOne="TODO Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe
-              sapiente explicabo consequatur laborum amet esse quaerat magnam
-              blanditiis quod deserunt inventore eligendi deleniti obcaecati
-              quia cupiditate vero consequuntur praesentium quis eveniet,
-              perspiciatis officia nisi fugiat natus laudantium."
+        introTitle="Trzymaj poziom - strefa profesjonalisty"
+        introOne="Doskonale wiemy, że sukces inwestycji zależy od ludzi, którzy ją realizują. Dlatego oferujemy niezawodne produkty, które są realnym wsparciem dla wykonawców i architektów. Mamy rozwiązania, które nie tylko gwarantują najwyższą jakość wykończenia, ale przede wszystkim przyspieszają pracę i eliminują ryzyko błędów, otwierając przy tym nowe możliwości aranżacyjne."
       />
 
       {/* Door Systems Gallery */}
@@ -75,8 +65,8 @@ const TrzymajPoziom = () => {
               isImageLeft={section.isImageLeft}
               title={section.title}
               description={section.description}
-              goToSectionName={section.goToSectionName}
-              goToSectionURL={section.goToSectionURL}
+              // goToSectionName={section.goToSectionName}
+              // goToSectionURL={section.goToSectionURL}
             />
           ))}
         </div>

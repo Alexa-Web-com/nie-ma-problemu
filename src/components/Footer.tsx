@@ -42,7 +42,16 @@ const Footer = () => {
                   href="tel:+48505397950"
                   className="text-footer-foreground/80 hover:text-accent transition-colors"
                 >
-                  +48 505 397 950
+                  +48 505 397 950 (dla klientów)
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-accent flex-shrink-0" />
+                <a
+                  href="tel:+48608453653 "
+                  className="text-footer-foreground/80 hover:text-accent transition-colors"
+                >
+                  +48 608 453 653 (dla wykonawców)
                 </a>
               </div>
               {/* <div className="flex items-start gap-3">
