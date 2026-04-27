@@ -6,7 +6,6 @@ import heroFloors from "@/assets/hero-floors.jpg";
 import floor1 from "@/assets/floor-1.jpg";
 import floor2 from "@/assets/floor-2.jpg";
 import floor3 from "@/assets/floor-3.jpg";
-import floor4 from "@/assets/floor-4.jpg";
 import BaseSection from "@/components/BaseSection";
 
 const keepStandards = [
