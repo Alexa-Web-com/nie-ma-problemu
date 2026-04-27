@@ -1,19 +1,13 @@
-import ImageGallery from '@/components/ImageGallery'
+import ImageGallery from "@/components/ImageGallery";
 
 import doorsSliding from "@/assets/doors-sliding.jpg";
 import doorsGlass from "@/assets/doors-glass.jpg";
-import doorsHandle from "@/assets/doors-handle.png";
+import doorsHandle from "@/assets/doors-handle.jpg";
 
-const images: string[] = [
-    doorsSliding,
-    doorsGlass,
-    doorsHandle,
-];
+const images: string[] = [doorsSliding, doorsGlass, doorsHandle];
 
 const DekorujGaleria1 = () => {
-  return (
-    <ImageGallery images={images} />
-  )
-}
+  return <ImageGallery images={images} />;
+};
 
-export default DekorujGaleria1
+export default DekorujGaleria1;
