@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import SectionHeader from "@/components/SectionHeader";
 import { ArrowRight } from "lucide-react";
-import heroDecoration from "@/assets/hero-decoration.png";
+import heroDecoration from "@/assets/hero-decoration.jpg";
 import decoration1 from "@/assets/decorate-1.png";
 import decoration2 from "@/assets/decorate-2.png";
 import decoration3 from "@/assets/decorate-3.png";
@@ -11,31 +11,31 @@ import BaseSection from "@/components/BaseSection";
 
 const decorations = [
   {
-    title: "Elegancka jadalnia",
+    title: "Tapety",
     description:
-      "Artystyczna tapeta z motywem drzew i naturalnych form. Idealne tło dla nowoczesnej jadalni z drewnianymi akcentami.",
+      "Oferujemy tapety, które projektowane są jak obrazy – idealnie dopasowane do wymiarów Twojej ściany, by kompozycja zawsze prezentowała się perfekcyjnie.",
     baseImage: decoration1,
-    altImage: "alt", //TODO: add alt text
+    altImage: "Przykład dekoracji - tapeta",
     isImageLeft: true,
     goToSectionName: "Zobacz galerię",
     goToSectionURL: "/dekoruj/dekoruj-galeria-1",
   },
   {
-    title: "Sypialnia w stylu botanicznym",
+    title: "Sztukateria",
     description:
-      "Romantyczna tapeta z motywami roślinnymi i ptakami. Tworzy przytulną i relaksującą atmosferę w sypialni.",
+      "Listwy i panele 3D, które spajają całą aranżację w spójną całość oraz podkreślają styl i elegancję. Są nie tylko estetyczne, ale też niezawodne i trwałe.",
     baseImage: decoration2,
-    altImage: "alt", //TODO: add alt text
+    altImage: "Przykład dekoracji - sztukateria",
     isImageLeft: false,
     goToSectionName: "Zobacz galerię",
     goToSectionURL: "/dekoruj/dekoruj-galeria-2",
   },
   {
-    title: "Salon z akcentem złota",
+    title: "Płyty ścienne i podłogowe",
     description:
-      "Subtelna tapeta z delikatnymi gałązkami i złotymi akcentami. Dodaje elegancji i ciepła każdemu salonowi.",
+      "Innowacyjne płyty SPC to rewolucja w wykończeniu wnętrz. Są całkowicie wodoodporne, ekstremalnie trwałe i banalnie proste w montażu, a przy tym piękne.",
     baseImage: decoration3,
-    altImage: "alt", //TODO: add alt text
+    altImage: "Przykład dekoracji - płyty",
     isImageLeft: true,
     goToSectionName: "Zobacz galerię",
     goToSectionURL: "/dekoruj/dekoruj-galeria-3",
@@ -47,13 +47,11 @@ const Dekoruj = () => {
     <Layout>
       <PageHero
         title="Dekoruj"
-        subtitle="Tapety, podłogi i sztukateria, które odmienią Twoje wnętrze"
+        subtitle="Tapety i sztukateria, które odmienią Twoje wnętrze"
         backgroundImage={heroDecoration}
         isBacgkgroundForTextDark={true}
         introTitle="Wyjątkowe dekoracje ścienne"
-        introOne="Odkryj nasze kolekcje tapet, podłóg i sztukaterii, które nadadzą
-              Twoim wnętrzom wyjątkowy charakter. Każdy projekt realizujemy z
-              najwyższą dbałością o detale i profesjonalny montaż."
+        introOne="Odkryj wyjątkowe kolekcje tapet, elegancką sztukaterię oraz wodoodporne płyty dekoracyjne, które nadadzą Twoim wnętrzom niepowtarzalny charakter. Sprawdź niezawodne rozwiązania, idealnie dopasowane do wymiarów i funkcji pomieszczeń."
       />
 
       {/* Gallery Section */}

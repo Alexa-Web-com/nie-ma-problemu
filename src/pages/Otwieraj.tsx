@@ -3,12 +3,12 @@ import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 
 import { ArrowRight } from "lucide-react";
-import heroDoors from "@/assets/hero-doors.png";
+import heroDoors from "@/assets/hero-doors.jpg";
 import doorsHidden from "@/assets/doors-hidden.jpg";
 import doorsClassic from "@/assets/doors-classic.jpg";
 import doorsSliding from "@/assets/doors-sliding.jpg";
 import doorsGlass from "@/assets/doors-glass.jpg";
-import doorsHandle from "@/assets/doors-handle.png";
+import doorsHandle from "@/assets/doors-handle.jpg";
 import BaseSection from "@/components/BaseSection";
 
 const doorTypes = [
@@ -63,15 +63,7 @@ const Otwieraj = () => {
         backgroundImage={heroDoors}
         isBacgkgroundForTextDark={true}
         introTitle="Systemy drzwiowe – nowoczesne i praktyczne"
-        introOne="Wybór drzwi to decyzja, która wpływa nie tylko na funkcjonalność,
-              ale i styl całego wnętrza. Oferujemy szeroką gamę drzwi
-              wewnętrznych – od klasycznych modeli po innowacyjne rozwiązania z
-              ukrytą ościeżnicą, które zapewniają minimalistyczny, elegancki
-              efekt."
-        introTwo="Innowacyjne systemy drzwiowe, w tym drzwi z ukrytą ościeżnicą, to
-              zdecydowanie nasz konik. Jednak nie na tym kończy się nasza oferta
-              drzwiowa. Posiadamy szeroki wachlarz drzwi wewnętrznych, zarówno
-              klasycznych, jak i nowoczesnych."
+        introOne="Wybór drzwi to decyzja, która wpływa nie tylko na funkcjonalność, ale i styl całego wnętrza. Oferujemy szeroką gamę drzwi wewnętrznych – od klasycznych modeli po innowacyjne rozwiązania z ukrytą ościeżnicą, które zapewniają minimalistyczny, ponadczasowy efekt, świetnie wpisujący się w każdy styl."
       />
 
       {/* Door Types Gallery */}
@@ -99,12 +91,8 @@ const Otwieraj = () => {
             baseImage={doorsHandle}
             altImage="klamka"
             isImageLeft={false}
-            title="Klamki nowoczesne i minimalistyczne"
-            description="Klamki dobieramy nie tylko wizualnie, ale i technicznie – do
-                drzwi z ukrytą ościeżnicą, szklanych i klasycznych. Oferujemy
-                też pełne zestawy z rozetami, wkładkami, pochwyty do drzwi
-                przesuwnych oraz rozwiązania bezklamkowe (push-to-open) dla
-                wnętrz ultraminimalistycznych."
+            title="Klamki – detal, który robi różnicę"
+            description="To klamka nadaje drzwiom ostateczny sznyt i decyduje o komforcie codziennego użytkowania. Oferujemy szeroki wybór modeli od najlepszych producentów na rynku, dzięki czemu masz pewność, że wybrany detal będzie cieszył oko i działał niezawodnie przez lata."
             goToSectionName="Zobacz galerię klamek"
             goToSectionURL="/otwieraj/otwieraj-galeria-5"
             goToSectionBg

@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import SectionHeader from "@/components/SectionHeader";
 import { ArrowRight, Shield, Award, Users } from "lucide-react";
-import heroHome from "@/assets/hero-home.png";
-import heroDoors from "@/assets/hero-doors.png";
-import heroDecoration from "@/assets/hero-decoration.png";
+import heroHome from "@/assets/hero-home.jpg";
+import heroDoors from "@/assets/hero-doors.jpg";
+import heroDecoration from "@/assets/hero-decoration.jpg";
 import heroRealizations from "@/assets/hero-realizations.jpg";
 import heroFloors from "@/assets/hero-floors.jpg";
 import BaseSection from "@/components/BaseSection";
@@ -13,45 +13,45 @@ import PageHero from "@/components/PageHero";
 const sectionData = [
   {
     baseImage: heroDoors,
-    altImage: "Drzwi i klamki",
+    altImage: "Drzwi wewnętrzne i klamki",
     isImageLeft: true,
     surtitle: "Otwieraj",
-    title: "Drzwi i klamki",
+    title: "Drzwi wewnętrzne i klamki",
     description:
-      "Zobacz nowoczesne i klasyczne drzwi wewnętrzne, w tym systemy z ukrytą ościeżnicą, drzwi szklane i efektowene rozwiązania lustrzane. Dobierz stylowe klamki, które dopełnią całość.",
+      "Wszystko zaczyna się od progu. Wybierz stylowe i solidne drzwi, które chronią Twoją prywatność i klamki, które są biżuterią dla wnętrza. Oferujemy modele od klasyki po nowoczesny minimalizm – zawsze z profesjonalnym montażem.",
     goToSectionName: "Sprawdź ofertę",
     goToSectionURL: "/otwieraj",
   },
   {
     baseImage: heroDecoration,
-    altImage: "Tapety i dekoracje",
+    altImage: "Drzwi, tapety i płyty ścienno-podłogowe",
     isImageLeft: false,
     surtitle: "Dekoruj",
-    title: "Tapety, podłogi, sztukateria",
+    title: "Drzwi, tapety i płyty ścienno-podłogowe",
     description:
-      "Zobacz nowoczesne i klasyczne drzwi wewnętrzne, w tym systemy z ukrytą ościeżnicą, drzwi szklane i efektowene rozwiązania lustrzane. Dobierz stylowe klamki, które dopełnią całość.",
+      "Nadaj swojemu wnętrzu niepowtarzalny charakter. Odkryj wyjątkowe tapety na wymiar, elegancką sztukaterię oraz nowoczesne płyty dekoracyjne. Wybierz rozwiązania, które zachwycają trwałością i stylem.",
     goToSectionName: "Sprawdź ofertę",
     goToSectionURL: "/dekoruj",
   },
   {
     baseImage: heroRealizations,
-    altImage: "przykładowa realizacja",
+    altImage: "Przykładowa realizacja",
     isImageLeft: true,
     surtitle: "Oglądaj",
-    title: "Nasze realizacje",
+    title: "Nasza praca bez retuszu",
     description:
-      "Przekonaj się, jak wybrane przez nas drzwi, podłogi i detale wykończeniowe prezentują się w rzeczywistych wnętrzach. Odkryj różnorodność stylów – od nowoczesnego minimalizmu po klasyczną elegancję – i zobacz jakość naszych montaży w praktyce.",
+      "Przekonaj się, jak oferowane przez nas produkty prezentują się we wnętrzach osób, które nam zaufały. Zobacz jakość naszego montażu, sprawdź, jak pracują nasze ekipy i jak zmieniają się domy naszych klientów.",
     goToSectionName: "Zobacz galerię",
     goToSectionURL: "/ogladaj",
   },
   {
     baseImage: heroFloors,
-    altImage: "Podłogi",
+    altImage: "Dla wykonawców",
     isImageLeft: false,
     surtitle: "Trzymaj poziom",
-    title: "Dla wykonawców",
+    title: "Strefa profesjonalisty: fundament, który buduje zaufanie",
     description:
-      "Profesjonalne systemy poziomowania, narzędzia i materiały ułatwiające prace remontowe. Sprawdzone rozwiązania dla fachowców.",
+      "Narzędzia i systemy, które pozwalają wykonawcom pracować szybciej i bez poprawek, a projektantom dają wolność w kreowaniu luksusowych, bezpiecznych i funkcjonalnych wnętrz.",
     goToSectionName: "Sprawdź",
     goToSectionURL: "/trzymaj-poziom",
   },
@@ -62,15 +62,14 @@ const Index = () => {
     <Layout>
       {/* Hero Section */}
       <PageHero
-        title={`Tworzymy piękne \n i funkcjonalne wnętrza`}
-        subtitle="Drzwi, podłogi, tapety i sztukateria z montażem"
+        title={`Piękne i funkcjonalne wnętrza`}
+        subtitle="Drzwi z montażem, stylowe tapety, innowacyjne systemy narzędziowe"
         backgroundImage={heroHome}
         ctaButtonText="Skontaktuj się"
         ctaLinkURL="/kontakt"
         introSurtitle="Masz wnętrze do wykończenia?"
         introTitle="Nie ma problemu!"
-        introOne="Doradzamy, dostarczamy i montujemy – kompleksowo i z dbałością o
-              każdy detal. Działamy mobilnie – dojeżdżamy na miejsce budowy."
+        introOne="Doradzamy, dostarczamy i montujemy – oferujemy sprawdzone produkty, zapewniamy fachowy montaż i profesjonalne wsparcie techniczne dla Twojej inwestycji."
       />
 
       {/* Services Preview */}

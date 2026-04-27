@@ -6,15 +6,15 @@ import heroRealizations from "@/assets/hero-realizations.jpg";
 import realization1 from "@/assets/realization1.png";
 // import realization2 from "@/assets/realization2.png"; // TODO: remove
 // import realization3 from "@/assets/realization3.png"; // TODO: remove
-import heroDoors from "@/assets/hero-doors.png";
+import heroDoors from "@/assets/hero-doors.jpg";
 import BaseSection from "@/components/BaseSection";
 
 const realizations = [
   {
     surtitle: "Gdynia",
-    title: "Artystyczna tapeta kwiatowa",
+    title: "Galeria",
     description:
-      "Elegancka realizacja z wykorzystaniem fototapety z motywem kwiatów w odcieniach szarości i beżu. Idealne połączenie z nowoczesnymi drzwiami z ukrytą ościeżnicą.",
+      "Każdy projekt to unikalna historia. Zobacz jak nasze rozwiązania zmieniają wnętrza naszych klientów w całym Trójmieście i okolicach, a nawet dalej.",
     baseImage: realization1,
     altImage: "alt", //TODO: add alt text
     isImageLeft: true,
@@ -56,9 +56,7 @@ const Ogladaj = () => {
         backgroundImage={heroRealizations}
         isBacgkgroundForTextDark={true}
         introTitle="Nasze realizacje"
-        introOne="Każdy projekt to unikalna historia. Zobacz jak nasze rozwiązania
-              zmieniają wnętrza naszych klientów w całym Trójmieście i
-              okolicach."
+        introOne="Każdy projekt to unikalna historia. Zobacz jak nasze rozwiązania zmieniają wnętrza naszych klientów w całym Trójmieście i okolicach, a nawet dalej."
       />
 
       {/* Gallery Section */}
@@ -85,15 +83,10 @@ const Ogladaj = () => {
         <div className="container-custom">
           <BaseSection
             baseImage={heroDoors}
-            altImage="youtube" // TODO: add alt text
+            altImage="Youtube" // TODO: add alt text
             isImageLeft={false}
-            title="TODO Oglądaj nas na Youtube"
-            description="  TODO Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Qui, hic iste quisquam, ut incidunt tenetur nesciunt facilis
-                itaque maiores odio ullam aspernatur numquam ducimus, aut
-                perspiciatis ad quas a suscipit modi sint possimus. Esse
-                provident fugiat deleniti harum. Voluptate omnis atque natus
-                aliquid illum ipsum?"
+            title="Zobacz nas w akcji!"
+            description="Zapraszamy na nasz kanał na YouTube! Publikujemy tam filmy z naszych realizacji, pokazujemy detale wykończenia i dzielimy się praktycznymi poradami. Kliknij i zainspiruj się do zmian w swoim domu!"
             goToSectionName="Przejdź do Youtube"
             goToSectionURL="https://youtube.com" //TODO: update URL
             goToSectionBg

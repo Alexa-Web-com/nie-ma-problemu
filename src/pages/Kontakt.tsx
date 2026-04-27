@@ -1,15 +1,7 @@
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  Facebook,
-  Instagram,
-  Youtube,
-} from "lucide-react";
+import { Phone, Mail, Facebook, Instagram, Youtube, Home } from "lucide-react";
 import heroContact from "@/assets/hero-contact.jpg";
 
 const Kontakt = () => {
@@ -20,16 +12,16 @@ const Kontakt = () => {
         subtitle="Porozmawiajmy o Twoim projekcie"
         backgroundImage={heroContact}
         isBacgkgroundForTextDark={true}
-        introTitle="Dane kontaktowe"
-        introOne="TODO Zachęcający opis sekcji KONTAKT lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        introTitle="Spotkajmy się tam, gdzie dzieją się zmiany!"
+        introOne="Cenimy Twój czas, dlatego to my dojeżdżamy do Ciebie. Nie prowadzimy stacjonarnego biura, bo wierzymy, że najlepsze decyzje dotyczące wnętrz podejmuje się na miejscu. Zadzwoń lub napisz do nas, aby od razu otrzymać wstępną wycenę lub umówić się na pomiary i prezentację oferty."
       />
 
       {/* Contact Info Section */}
       <section className="section-padding pt-0 bg-card">
-        <div className="container-custom ">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Details */}
-            <div>
+            <div className="lg:col-span-1">
               <div className="space-y-6">
                 <div className="rounded-lg bg-secondary p-4">
                   <p className="text-lg font-medium text-accent pb-2">
@@ -40,7 +32,7 @@ const Kontakt = () => {
                   </h3>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                     <Mail className="w-6 h-6 text-accent" />
                   </div>
                   <div>
@@ -57,12 +49,12 @@ const Kontakt = () => {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                     <Phone className="w-6 h-6 text-accent" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">
-                      Telefon
+                      Telefon dla klientów
                     </h3>
                     <a
                       href="tel:+48505397950"
@@ -74,34 +66,19 @@ const Kontakt = () => {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-accent" />
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                    <Phone className="w-6 h-6 text-accent" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">
-                      Adres
+                      Telefon dla wykonawców
                     </h3>
-                    <p className="text-muted-foreground">
-                      ul. Wolności 16
-                      <br />
-                      Gdynia, Polska
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">
-                      Godziny otwarcia
-                    </h3>
-                    <p className="text-muted-foreground">
-                      Poniedziałek - Piątek: 9:00 - 17:00
-                      <br />
-                      Sobota: 10:00 - 14:00
-                    </p>
+                    <a
+                      href="tel:+48505397950"
+                      className="text-muted-foreground"
+                    >
+                      +48 608 453 653
+                    </a>
                   </div>
                 </div>
               </div>
@@ -144,48 +121,66 @@ const Kontakt = () => {
             </div>
 
             {/* Map Section */}
-            <div className="rounded-lg overflow-hidden shadow-xl">
+            <div className="rounded-lg overflow-hidden shadow-xl lg:col-span-2">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2314.6751595261994!2d18.53881397684099!3d54.51838097265935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fda73817f73adf%3A0x57f7c8d93e3d5c7a!2sWolno%C5%9Bci%2016%2C%2081-327%20Gdynia!5e0!3m2!1spl!2spl!4v1706000000000!5m2!1spl!2spl"
+                src="https://maps.google.com/maps?q=Tr%C3%B3jmiasto&t=&z=10&ie=UTF8&iwloc=&output=embed"
                 width="100%"
-                height="570"
+                height="460"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Lokalizacja Nie Ma Problemu - ul. Wolności 16, Gdynia"
+                title="Obszar działania - Trójmiasto i okolice"
                 className="w-full"
               />
             </div>
+          </div>
+        </div>
 
-            {/* Info Card */}
-            {/* <div className="bg-section-alt rounded-lg p-8"> */}
-            {/* <h3 className="text-2xl font-sansTitle font-semibold text-foreground mb-6">
-                Dlaczego warto nas odwiedzić?
-              </h3>
-              <ul className="space-y-4 text-muted-foreground">
-                <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>Bezpłatna wycena i konsultacja projektowa</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>Showroom z ekspozycją drzwi i materiałów</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>Doradztwo w doborze kolorów i wzorów</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>Próbki materiałów do obejrzenia</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>Parking dla klientów</span>
-                </li>
-              </ul> */}
-            {/* </div> */}
+        <div className="container-custom">
+          <div className="pt-12 flex items-start gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-12">
+              <div className="lg:col-span-1 flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <Home className="w-6 h-6 text-accent" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">
+                    Dane firmy
+                  </h3>
+                  <p className="text-muted-foreground">
+                    ul. Wolności 17/1
+                    <br />
+                    81-327 Gdynia
+                    <br />
+                    NIP: 739 356 87 86
+                  </p>
+                </div>
+              </div>
+              <div className="lg:col-span-2 flex items-center">
+                <p className="text-muted-foreground italic">
+                  Uwaga: Pod tym adresem prowadzimy zaplecze logistyczne.
+                  Spotkania z klientami odbywają się na miejscu inwestycji.
+                </p>
+              </div>
+            </div>
+            {/* <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+              <MapPin className="w-6 h-6 text-accent" />
+            </div> */}
+            {/* <div>
+              <h3 className="font-semibold text-foreground mb-1">Dane firmy</h3>
+              <p className="text-muted-foreground">
+                ul. Wolności 17/1
+                <br />
+                81-327 Gdynia
+                <br />
+                NIP: 739 356 87 86
+              </p>
+              <p className="text-muted-foreground italic">
+                Uwaga: Pod tym adresem prowadzimy zaplecze logistyczne.
+                Spotkania z klientami odbywają się na miejscu inwestycji.
+              </p>
+            </div> */}
           </div>
         </div>
       </section>
