@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 
-import { Phone, Mail, Facebook, Instagram, Youtube, Home } from "lucide-react";
+import { Mail, Facebook, Instagram, Youtube, Home, DoorOpen, Hammer } from "lucide-react";
 import heroContact from "@/assets/hero-contact.jpg";
 
 const Kontakt = () => {
@@ -50,11 +50,11 @@ const Kontakt = () => {
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                    <Phone className="w-6 h-6 text-accent" />
+                    <DoorOpen className="w-6 h-6 text-accent" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">
-                      Telefon dla klientów
+                      Drzwi i dekoracje
                     </h3>
                     <a
                       href="tel:+48505397950"
@@ -67,11 +67,11 @@ const Kontakt = () => {
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                    <Phone className="w-6 h-6 text-accent" />
+                    <Hammer className="w-6 h-6 text-accent" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">
-                      Telefon dla wykonawców
+                      Systemy budowlane i grzewcze
                     </h3>
                     <a
                       href="tel:+48505397950"
@@ -123,9 +123,9 @@ const Kontakt = () => {
             {/* Map Section */}
             <div className="rounded-lg overflow-hidden shadow-xl lg:col-span-2">
               <iframe
-                src="https://maps.google.com/maps?q=Tr%C3%B3jmiasto&t=&z=10&ie=UTF8&iwloc=&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228829.9785804984!2d18.309709969212058!3d54.473445822540604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fda727e02372cf%3A0xaff08c49b5f669ee!2sWolno%C5%9Bci%2017%2C%2081-327%20Gdynia!5e0!3m2!1spl!2spl!4v1779785490251!5m2!1spl!2spl"
                 width="100%"
-                height="460"
+                height="490"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
@@ -164,50 +164,8 @@ const Kontakt = () => {
                 </p>
               </div>
             </div>
-            {/* <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-              <MapPin className="w-6 h-6 text-accent" />
-            </div> */}
-            {/* <div>
-              <h3 className="font-semibold text-foreground mb-1">Dane firmy</h3>
-              <p className="text-muted-foreground">
-                ul. Wolności 17/1
-                <br />
-                81-327 Gdynia
-                <br />
-                NIP: 739 356 87 86
-              </p>
-              <p className="text-muted-foreground italic">
-                Uwaga: Pod tym adresem prowadzimy zaplecze logistyczne.
-                Spotkania z klientami odbywają się na miejscu inwestycji.
-              </p>
-            </div> */}
           </div>
         </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="section-padding bg-section-alt">
-        {/* <div className="container-custom">
-          <SectionHeader
-            title="Jak do nas trafić?"
-            subtitle="Znajdujemy się w centrum Gdyni, w dogodnej lokalizacji z łatwym dojazdem"
-            centered
-          />
-
-          <div className="rounded-lg overflow-hidden shadow-xl">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2314.6751595261994!2d18.53881397684099!3d54.51838097265935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fda73817f73adf%3A0x57f7c8d93e3d5c7a!2sWolno%C5%9Bci%2016%2C%2081-327%20Gdynia!5e0!3m2!1spl!2spl!4v1706000000000!5m2!1spl!2spl"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Lokalizacja Nie Ma Problemu - ul. Wolności 16, Gdynia"
-              className="w-full"
-            />
-          </div>
-        </div> */}
       </section>
 
       {/* Bottom CTA */}
