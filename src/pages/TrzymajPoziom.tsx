@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import { ArrowRight } from "lucide-react";
-import heroFloors from "@/assets/hero-floors.jpg";
+import heroKeep from "@/assets/hero-keep.jpg";
 import floor1 from "@/assets/floor-1.jpg";
 import floor2 from "@/assets/floor-2.jpg";
 import floor3 from "@/assets/floor-3.jpg";
@@ -47,7 +47,7 @@ const TrzymajPoziom = () => {
       <PageHero
         title="Trzymaj poziom"
         subtitle="Sprawdzone rozwiązania dla fachowców"
-        backgroundImage={heroFloors}
+        backgroundImage={heroKeep}
         isBacgkgroundForTextDark={true}
         introTitle="Trzymaj poziom - strefa profesjonalisty"
         introOne="Doskonale wiemy, że sukces inwestycji zależy od ludzi, którzy ją realizują. Dlatego oferujemy niezawodne produkty, które są realnym wsparciem dla wykonawców i architektów. Mamy rozwiązania, które nie tylko gwarantują najwyższą jakość wykończenia, ale przede wszystkim przyspieszają pracę i eliminują ryzyko błędów, otwierając przy tym nowe możliwości aranżacyjne."
@@ -64,8 +64,8 @@ const TrzymajPoziom = () => {
               isImageLeft={section.isImageLeft}
               title={section.title}
               description={section.description}
-              // goToSectionName={section.goToSectionName}
-              // goToSectionURL={section.goToSectionURL}
+            // goToSectionName={section.goToSectionName}
+            // goToSectionURL={section.goToSectionURL}
             />
           ))}
         </div>

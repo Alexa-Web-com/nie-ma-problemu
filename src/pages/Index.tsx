@@ -6,7 +6,7 @@ import heroHome from "@/assets/hero-home.jpg";
 import heroDoors from "@/assets/hero-doors.jpg";
 import heroDecoration from "@/assets/hero-decoration.jpg";
 import heroRealizations from "@/assets/hero-realizations.jpg";
-import heroFloors from "@/assets/hero-floors.jpg";
+import heroKeep from "@/assets/hero-keep.jpg";
 import BaseSection from "@/components/BaseSection";
 import PageHero from "@/components/PageHero";
 
@@ -45,7 +45,7 @@ const sectionData = [
     goToSectionURL: "/ogladaj",
   },
   {
-    baseImage: heroFloors,
+    baseImage: heroKeep,
     altImage: "Dla wykonawców",
     isImageLeft: false,
     surtitle: "Trzymaj poziom",
