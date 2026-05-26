@@ -4,9 +4,9 @@ import PageHero from "@/components/PageHero";
 import SectionHeader from "@/components/SectionHeader";
 import { ArrowRight } from "lucide-react";
 import heroDecoration from "@/assets/hero-decoration.jpg";
-import decoration1 from "@/assets/decorate-1.png";
-import decoration2 from "@/assets/decorate-2.png";
-import decoration3 from "@/assets/decorate-3.png";
+import decoration2A from "@/assets/2a-decorate-wallpapers.jpg";
+import decoration2B from "@/assets/2b-decorate-stucco.jpg";
+import decoration2C from "@/assets/2c-decorate-panels.jpg";
 import BaseSection from "@/components/BaseSection";
 
 const decorations = [
@@ -14,7 +14,7 @@ const decorations = [
     title: "Tapety",
     description:
       "Oferujemy tapety, które projektowane są jak obrazy – idealnie dopasowane do wymiarów Twojej ściany, by kompozycja zawsze prezentowała się perfekcyjnie.",
-    baseImage: decoration1,
+    baseImage: decoration2A,
     altImage: "Przykład dekoracji - tapeta",
     isImageLeft: true,
     goToSectionName: "Zobacz galerię",
@@ -24,7 +24,7 @@ const decorations = [
     title: "Sztukateria",
     description:
       "Listwy i panele 3D, które spajają całą aranżację w spójną całość oraz podkreślają styl i elegancję. Są nie tylko estetyczne, ale też niezawodne i trwałe.",
-    baseImage: decoration2,
+    baseImage: decoration2B,
     altImage: "Przykład dekoracji - sztukateria",
     isImageLeft: false,
     goToSectionName: "Zobacz galerię",
@@ -34,7 +34,7 @@ const decorations = [
     title: "Płyty ścienne i podłogowe",
     description:
       "Innowacyjne płyty SPC to rewolucja w wykończeniu wnętrz. Są całkowicie wodoodporne, ekstremalnie trwałe i banalnie proste w montażu, a przy tym piękne.",
-    baseImage: decoration3,
+    baseImage: decoration2C,
     altImage: "Przykład dekoracji - płyty",
     isImageLeft: true,
     goToSectionName: "Zobacz galerię",

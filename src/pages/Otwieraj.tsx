@@ -4,11 +4,11 @@ import PageHero from "@/components/PageHero";
 
 import { ArrowRight } from "lucide-react";
 import heroDoors from "@/assets/hero-doors.jpg";
-import doorsHidden from "@/assets/doors-hidden.jpg";
-import doorsClassic from "@/assets/doors-classic.jpg";
-import doorsSliding from "@/assets/doors-sliding.jpg";
-import doorsGlass from "@/assets/doors-glass.jpg";
-import doorsHandle from "@/assets/doors-handle.jpg";
+import doorsHidden1A from "@/assets/1a-doors-hidden.jpg";
+import doorsSliding1B from "@/assets/1b-doors-sliding.jpg";
+import doorsClassic1C from "@/assets/1c-doors-classic.jpg";
+import doorsGlass1D from "@/assets/1d-doors-glass.jpg";
+import doorsHandle1E from "@/assets/1e-doors-handle.jpg";
 import BaseSection from "@/components/BaseSection";
 
 const doorTypes = [
@@ -16,7 +16,7 @@ const doorTypes = [
     title: "Drzwi z ukrytą ościeżnicą",
     description:
       "Minimalistyczny design z idealnie gładką powierzchnią ściany. Nowoczesne rozwiązanie dla wymagających.",
-    baseImage: doorsHidden,
+    baseImage: doorsHidden1A,
     altImage: "Drzwi z ukrytą ościeżnicą",
     isImageLeft: true,
     goToSectionName: "Zobacz galerię",
@@ -26,7 +26,7 @@ const doorTypes = [
     title: "Drzwi przesuwne",
     description:
       "Oszczędność miejsca i elegancki wygląd. Idealne do małych pomieszczeń i nowoczesnych aranżacji.",
-    baseImage: doorsSliding,
+    baseImage: doorsSliding1B,
     altImage: "Drzwi przesuwne",
     isImageLeft: false,
     goToSectionName: "Zobacz galerię",
@@ -36,7 +36,7 @@ const doorTypes = [
     title: "Drzwi klasyczne",
     description:
       "Ponadczasowy styl z tradycyjną ościeżnicą. Doskonałe do klasycznych i eleganckich wnętrz.",
-    baseImage: doorsClassic,
+    baseImage: doorsClassic1C,
     altImage: "Drzwi klasyczne",
     isImageLeft: true,
     goToSectionName: "Zobacz galerię",
@@ -46,7 +46,7 @@ const doorTypes = [
     title: "Rozwiązania szklane",
     description:
       "Przeszklenia i drzwi szklane, które dodają przestrzeni i światła każdemu wnętrzu.",
-    baseImage: doorsGlass,
+    baseImage: doorsGlass1D,
     altImage: "Drzwi szklane",
     isImageLeft: false,
     goToSectionName: "Zobacz galerię",
@@ -88,7 +88,7 @@ const Otwieraj = () => {
       <section className="section-padding bg-card">
         <div className="container-custom">
           <BaseSection
-            baseImage={doorsHandle}
+            baseImage={doorsHandle1E}
             altImage="klamka"
             isImageLeft={false}
             title="Klamki – detal, który robi różnicę"
