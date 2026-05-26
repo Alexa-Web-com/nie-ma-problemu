@@ -3,9 +3,9 @@ import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import { ArrowRight } from "lucide-react";
 import heroKeep from "@/assets/hero-keep.jpg";
-import floor1 from "@/assets/floor-1.jpg";
-import floor2 from "@/assets/floor-2.jpg";
-import floor3 from "@/assets/floor-3.jpg";
+import keep4A from "@/assets/trzymaj-4a.jpg";
+import keep4B from "@/assets/trzymaj-4b.jpg";
+import keep4C from "@/assets/trzymaj-4c.jpg";
 import BaseSection from "@/components/BaseSection";
 
 const keepStandards = [
@@ -13,31 +13,25 @@ const keepStandards = [
     title: "Nowoczesne systemy płyt i chemii budowlanej",
     description:
       "Systemowe i modułowe rozwiązania dające niemal nieograniczone możliwości aranżacyjne, będące jednocześnie szybkie i łatwe w montażu. Oferujemy sprawdzone produkty wysokiej jakości, dzięki którym realizacja odbędzie się bezproblemowo i w terminie.",
-    baseImage: floor1,
-    altImage: "alt", //TODO: add alt text
+    baseImage: keep4A,
+    altImage: "przykładowy produkt",
     isImageLeft: true,
-    goToSectionName: "Zobacz galerię",
-    goToSectionURL: "/trzymaj-poziom/trzymaj-poziom-galeria-1",
   },
   {
     title: "Narzędzia do cięcia i obróbki płytek",
     description:
       "Precyzyjny system do poziomowania płytek, solidne systemy do przenoszenia płyt wielkoformatowych oraz stoły glazurnicze to narzędzia, dzięki którym nadążysz za potrzebami klientów i za terminami. Te produkty doceniło już wielu fachowców, wypróbuj i zauważ różnicę.",
-    baseImage: floor2,
-    altImage: "alt", //TODO: add alt text
+    baseImage: keep4B,
+    altImage: "zdjęcie poglądowe montażu",
     isImageLeft: false,
-    goToSectionName: "Zobacz galerię",
-    goToSectionURL: "/trzymaj-poziom/trzymaj-poziom-galeria-2",
   },
   {
     title: "Systemy grzewcze do łazienek i SPA",
     description:
       "Wychodząc naprzeciw oczekiwaniom rynku, oferujemy elektryczne maty grzewcze, które zapewnią komfort klientom, łatwość montażu wykonawcom oraz nieograniczone możliwości aranżacyjne projektantom. To nie tylko ogrzewanie podłogowe, ale również m.in. podgrzewane siedziska, ściany i odparowywacze luster.",
-    baseImage: floor3,
-    altImage: "alt", //TODO: add alt text
+    baseImage: keep4C,
+    altImage: "termometr w telefonie",
     isImageLeft: true,
-    goToSectionName: "Zobacz galerię",
-    goToSectionURL: "/trzymaj-poziom/trzymaj-poziom-galeria-3",
   },
 ];
 
@@ -64,8 +58,6 @@ const TrzymajPoziom = () => {
               isImageLeft={section.isImageLeft}
               title={section.title}
               description={section.description}
-            // goToSectionName={section.goToSectionName}
-            // goToSectionURL={section.goToSectionURL}
             />
           ))}
         </div>
