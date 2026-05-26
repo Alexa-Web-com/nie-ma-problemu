@@ -2,7 +2,7 @@ import ImageGallery from "@/components/ImageGallery";
 
 import doorsSliding from "@/assets/doors-sliding.jpg";
 import doorsGlass from "@/assets/doors-glass.jpg";
-import doorsHandle from "@/assets/doors-handle.jpg";
+import doorsHandle from "@/assets/1e-doors-handle.jpg";
 
 const images: string[] = [doorsSliding, doorsGlass, doorsHandle];
 
