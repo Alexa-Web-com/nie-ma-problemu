@@ -21,11 +21,6 @@ const DekorujGaleria3 = lazy(() => import("./pages/DekorujGaleria3"));
 
 const OgladajGaleria1 = lazy(() => import("./pages/OgladajGaleria1"));
 
-const TrzymajPoziomGaleria1 = lazy(() => import("./pages/TrzymajPoziomGaleria1"));
-const TrzymajPoziomGaleria2 = lazy(() => import("./pages/TrzymajPoziomGaleria2"));
-const TrzymajPoziomGaleria3 = lazy(() => import("./pages/TrzymajPoziomGaleria3"));
-const TrzymajPoziomGaleria4 = lazy(() => import("./pages/TrzymajPoziomGaleria4"));  
-
 const PageLoader = () => (
   <div className="flex items-center justify-center min-h-screen">
     <Loader2 className="w-8 h-8 animate-spin" />
@@ -36,7 +31,7 @@ function App() {
 
 
   return (
-<>
+    <>
 
       <HashRouter>
         <Routes>
@@ -118,43 +113,11 @@ function App() {
               </Suspense>
             }
           />
-          <Route
-            path="/trzymaj-poziom/trzymaj-poziom-galeria-1"
-            element={
-              <Suspense fallback={<PageLoader />}>
-                <TrzymajPoziomGaleria1 />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/trzymaj-poziom/trzymaj-poziom-galeria-2"
-            element={
-              <Suspense fallback={<PageLoader />}>
-                <TrzymajPoziomGaleria2 />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/trzymaj-poziom/trzymaj-poziom-galeria-3"
-            element={
-              <Suspense fallback={<PageLoader />}>
-                <TrzymajPoziomGaleria3 />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/trzymaj-poziom/trzymaj-poziom-galeria-4"
-            element={
-              <Suspense fallback={<PageLoader />}>
-                <TrzymajPoziomGaleria4 />
-              </Suspense>
-            }
-          />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </HashRouter>
 
-</>
+    </>
   )
 }
 
