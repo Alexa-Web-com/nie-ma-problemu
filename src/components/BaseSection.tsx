@@ -1,4 +1,3 @@
-// import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -12,6 +11,7 @@ interface BaseSectionProps {
   goToSectionName?: string;
   goToSectionURL?: string;
   goToSectionBg?: boolean;
+  openInNewTab?: boolean;
 }
 
 const BaseSection = ({
@@ -24,6 +24,7 @@ const BaseSection = ({
   goToSectionName,
   goToSectionURL,
   goToSectionBg,
+  openInNewTab,
 }: BaseSectionProps) => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-20">
@@ -52,6 +53,8 @@ const BaseSection = ({
           <Link
             to={goToSectionURL ?? ''}
             className={`inline-flex items-center gap-2 font-medium hover:gap-3 transition-all duration-200 ${goToSectionBg ? "inline-flex items-center gap-2 btn-primary" : "text-primary"}`}
+            target={openInNewTab ? "_blank" : undefined}
+            rel={openInNewTab ? "noopener noreferrer" : undefined}
           >
             {goToSectionName}
             <ArrowRight className="w-5 h-5" />
