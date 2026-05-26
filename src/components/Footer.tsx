@@ -1,9 +1,10 @@
 import {
-  Phone,
   Mail,
   Facebook,
   Instagram,
   Youtube,
+  DoorOpen,
+  Hammer,
   // MapPin
 } from "lucide-react";
 
@@ -37,7 +38,7 @@ const Footer = () => {
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-accent flex-shrink-0" />
+                <DoorOpen className="w-5 h-5 text-accent flex-shrink-0" />
                 <a
                   href="tel:+48505397950"
                   className="text-footer-foreground/80 hover:text-accent transition-colors"
@@ -46,7 +47,7 @@ const Footer = () => {
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-accent flex-shrink-0" />
+                <Hammer className="w-5 h-5 text-accent flex-shrink-0" />
                 <a
                   href="tel:+48608453653 "
                   className="text-footer-foreground/80 hover:text-accent transition-colors"
@@ -54,12 +55,6 @@ const Footer = () => {
                   +48 608 453 653 (dla wykonawców)
                 </a>
               </div>
-              {/* <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                <span className="text-footer-foreground/80">
-                  ul. Wolności 16, Gdynia
-                </span>
-              </div> */}
             </div>
           </div>
 
