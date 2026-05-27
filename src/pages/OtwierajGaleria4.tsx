@@ -25,7 +25,7 @@ const images: string[] = [
 ];
 
 const OtwierajGaleria4 = () => {
-  return <ImageGallery images={images} />;
+  return <ImageGallery images={images} caption="Eclisse, Porta" />;
 };
 
 export default OtwierajGaleria4;

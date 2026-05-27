@@ -26,7 +26,7 @@ const images: string[] = [
 ];
 
 const DekorujGaleria3 = () => {
-  return <ImageGallery images={images} />;
+  return <ImageGallery images={images} caption="Kronospan" />;
 };
 
 export default DekorujGaleria3;

@@ -21,7 +21,7 @@ const images: string[] = [
 ];
 
 const OtwierajGaleria3 = () => {
-  return <ImageGallery images={images} />;
+  return <ImageGallery images={images} caption="Porta, DRE" />;
 };
 
 export default OtwierajGaleria3;
