@@ -25,7 +25,7 @@ const images: string[] = [
 ];
 
 const DekorujGaleria1 = () => {
-  return <ImageGallery images={images} />;
+  return <ImageGallery images={images} caption="One Wall Design" />;
 };
 
 export default DekorujGaleria1;

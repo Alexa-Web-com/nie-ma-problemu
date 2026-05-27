@@ -83,8 +83,7 @@ const Dekoruj = () => {
                 Tapety
               </h3>
               <p className="text-muted-foreground">
-                Szeroki wybór wzorów od minimalistycznych po artystyczne
-                fototapety. Profesjonalny montaż z gwarancją.
+                Szeroki wybór wzorów od minimalistycznych po artystyczne fototapety.
               </p>
             </div>
 
@@ -93,8 +92,7 @@ const Dekoruj = () => {
                 Podłogi
               </h3>
               <p className="text-muted-foreground">
-                Drewniane, winylowe i laminowane. Montaż z dbałością o każdy
-                detal.
+                Nowoczesne panele SPC, które łączą piękno z fukncjonalnością i trwałością.
               </p>
             </div>
 
@@ -119,7 +117,7 @@ const Dekoruj = () => {
           </h2>
           <Link
             to="/kontakt"
-            className="inline-flex items-center gap-2 bg-card text-foreground hover:bg-card/90 px-8 py-4 rounded-md font-medium transition-all duration-200"
+            className="inline-flex items-center gap-2 bg-card text-foreground hover:bg-secondary px-8 py-4 rounded-md font-medium transition-all duration-200"
           >
             Skontaktuj się z nami
             <ArrowRight className="w-5 h-5" />

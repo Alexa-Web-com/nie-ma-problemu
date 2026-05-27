@@ -95,7 +95,6 @@ const Otwieraj = () => {
             description="To klamka nadaje drzwiom ostateczny sznyt i decyduje o komforcie codziennego użytkowania. Oferujemy szeroki wybór modeli od najlepszych producentów na rynku, dzięki czemu masz pewność, że wybrany detal będzie cieszył oko i działał niezawodnie przez lata."
             goToSectionName="Zobacz galerię klamek"
             goToSectionURL="/otwieraj/otwieraj-galeria-5"
-            goToSectionBg
           />
         </div>
       </section>
@@ -108,7 +107,7 @@ const Otwieraj = () => {
           </h2>
           <Link
             to="/kontakt"
-            className="inline-flex items-center gap-2 bg-card text-foreground hover:bg-card/90 px-8 py-4 rounded-md font-medium transition-all duration-200"
+            className="inline-flex items-center gap-2 bg-card text-foreground hover:bg-secondary px-8 py-4 rounded-md font-medium transition-all duration-200"
           >
             Skontaktuj się z nami
             <ArrowRight className="w-5 h-5" />

@@ -24,7 +24,7 @@ const images: string[] = [
 ];
 
 const DekorujGaleria2 = () => {
-  return <ImageGallery images={images} />;
+  return <ImageGallery images={images} caption="Orac" />;
 };
 
 export default DekorujGaleria2;

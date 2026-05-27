@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import { ArrowRight } from "lucide-react";
-import heroRealizations from "@/assets/hero-realizations.jpg";
+// import heroRealizations from "@/assets/hero-realizations.jpg";
+import heroRealizations from "@/assets/ukryte-10.jpg";
 import realization3A from "@/assets/oglądaj-1.jpg";
-import heroDoors from "@/assets/hero-doors.jpg";
+import movieShot from "@/assets/movie-shot.jpg";
 import BaseSection from "@/components/BaseSection";
 
 const realizations = [
@@ -56,15 +57,15 @@ const Ogladaj = () => {
       <section className="section-padding bg-card">
         <div className="container-custom">
           <BaseSection
-            baseImage={heroDoors}
+            baseImage={movieShot}
             altImage="Przykładowe wnętrze"
             isImageLeft={false}
             title="Zobacz nas w akcji!"
             description="Zapraszamy na nasz kanał na YouTube! Publikujemy tam filmy z naszych realizacji, pokazujemy detale wykończenia i dzielimy się praktycznymi poradami. Kliknij i zainspiruj się do zmian w swoim domu!"
             goToSectionName="Przejdź do Youtube"
             goToSectionURL="https://youtube.com/@niemaproblemugdynia"
-            goToSectionBg
             openInNewTab
+            openInNewTabImage
           />
         </div>
       </section>
@@ -80,7 +81,7 @@ const Ogladaj = () => {
           </p>
           <Link
             to="/kontakt"
-            className="inline-flex items-center gap-2 bg-card text-foreground hover:bg-card/90 px-8 py-4 rounded-md font-medium transition-all duration-200"
+            className="inline-flex items-center gap-2 bg-card text-foreground hover:bg-secondary px-8 py-4 rounded-md font-medium transition-all duration-200"
           >
             Skontaktuj się z nami
             <ArrowRight className="w-5 h-5" />

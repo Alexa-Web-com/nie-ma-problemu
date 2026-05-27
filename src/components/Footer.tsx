@@ -19,8 +19,7 @@ const Footer = () => {
               Nie Ma Problemu
             </h3>
             <p className="text-footer-foreground/70 mb-6">
-              Tworzymy piękne i funkcjonalne wnętrza. Drzwi, podłogi, tapety i
-              sztukateria z montażem.
+              Tworzymy piękne i funkcjonalne wnętrza. Drzwi z montażem, tapety i sztukateria oraz nowoczesne systemy wykończeniowe.
             </p>
           </div>
 
@@ -98,6 +97,7 @@ const Footer = () => {
           <p className="text-footer-foreground/50 text-sm">
             © 2026 studio-www. Wszelkie prawa zastrzeżone.
           </p>
+          <p className="text-footer-foreground/50 text-xs mt-2 italic">Fotografie i wizualizacje produktów są własnością marek: Eclisse, Porta, DRE, Aprile, One Wall Design, Orac, Kronospan, WIM, Warmup i zostały użyte za ich zgodą w celach prezentacyjnych. </p>
         </div>
       </div>
     </footer>

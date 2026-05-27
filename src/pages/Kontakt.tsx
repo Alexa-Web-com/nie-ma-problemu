@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 
-import { Mail, Facebook, Instagram, Youtube, Home, DoorOpen, Hammer } from "lucide-react";
+import { Mail, Facebook, Instagram, Youtube, Home, DoorOpen, Hammer, Lightbulb } from "lucide-react";
 import heroContact from "@/assets/hero-contact.jpg";
 
 const Kontakt = () => {
@@ -24,8 +24,8 @@ const Kontakt = () => {
             <div className="lg:col-span-1">
               <div className="space-y-6">
                 <div className="rounded-lg bg-secondary p-4">
-                  <p className="text-lg font-medium text-accent pb-2">
-                    💡 Pro tip
+                  <p className="text-lg font-medium text-accent pb-2 flex">
+                    <Lightbulb className="ml-2 mr-2 text-black" /> Pro tip
                   </p>
                   <h3 className="font-semibold text-foreground pl-2">
                     Przede wszystkim działamy zdalnie!
@@ -180,7 +180,7 @@ const Kontakt = () => {
           </p>
           <a
             href="mailto:kontakt@niemaproblemu.com.pl"
-            className="inline-flex items-center gap-2 bg-card text-foreground hover:bg-card/90 px-8 py-4 rounded-md font-medium transition-all duration-200"
+            className="inline-flex items-center gap-2 bg-card text-foreground hover:bg-secondary px-8 py-4 rounded-md font-medium transition-all duration-200"
           >
             <Mail className="w-5 h-5" />
             Napisz do nas

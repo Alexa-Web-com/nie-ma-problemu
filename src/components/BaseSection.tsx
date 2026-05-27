@@ -10,8 +10,8 @@ interface BaseSectionProps {
   description: string;
   goToSectionName?: string;
   goToSectionURL?: string;
-  goToSectionBg?: boolean;
   openInNewTab?: boolean;
+  openInNewTabImage?: boolean;
 }
 
 const BaseSection = ({
@@ -23,19 +23,34 @@ const BaseSection = ({
   description,
   goToSectionName,
   goToSectionURL,
-  goToSectionBg,
   openInNewTab,
+  openInNewTabImage
 }: BaseSectionProps) => {
+
+  const imageElement = (
+    <img
+      src={baseImage}
+      alt={altImage}
+      className="w-full h-[300px] md:h-[400px] object-cover transition-transform duration-500 hover:scale-105"
+    />
+  );
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-20">
       <div
         className={`${isImageLeft ? "" : "lg:order-2"} overflow-hidden rounded-lg shadow-xl`}
       >
-        <img
-          src={baseImage}
-          alt={altImage}
-          className="w-full h-[300px] md:h-[400px] object-cover transition-transform duration-500 hover:scale-105"
-        />
+        {openInNewTabImage ? (
+          <Link
+            to={goToSectionURL ?? ''}
+            target={openInNewTab ? "_blank" : undefined}
+            rel={openInNewTab ? "noopener noreferrer" : undefined}
+          >
+            {imageElement}
+          </Link>
+        ) : (
+          imageElement
+        )}
       </div>
       <div>
         {surtitle && (
@@ -52,7 +67,7 @@ const BaseSection = ({
         {goToSectionName && (
           <Link
             to={goToSectionURL ?? ''}
-            className={`inline-flex items-center gap-2 font-medium hover:gap-3 transition-all duration-200 ${goToSectionBg ? "inline-flex items-center gap-2 btn-primary" : "text-primary"}`}
+            className={"inline-flex items-center gap-2 font-medium hover:gap-3 transition-all duration-200 text-accent"}
             target={openInNewTab ? "_blank" : undefined}
             rel={openInNewTab ? "noopener noreferrer" : undefined}
           >

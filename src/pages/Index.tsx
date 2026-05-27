@@ -27,7 +27,7 @@ const sectionData = [
     altImage: "Drzwi, tapety i płyty ścienno-podłogowe",
     isImageLeft: false,
     surtitle: "Dekoruj",
-    title: "Drzwi, tapety i płyty ścienno-podłogowe",
+    title: "Tapety, sztukateria i panele ścienno-podłogowe",
     description:
       "Nadaj swojemu wnętrzu niepowtarzalny charakter. Odkryj wyjątkowe tapety na wymiar, elegancką sztukaterię oraz nowoczesne płyty dekoracyjne. Wybierz rozwiązania, które zachwycają trwałością i stylem.",
     goToSectionName: "Sprawdź ofertę",
@@ -155,7 +155,7 @@ const Index = () => {
           </p>
           <Link
             to="/kontakt"
-            className="inline-flex items-center gap-2 bg-card text-foreground hover:bg-card/90 px-8 py-4 rounded-md font-medium transition-all duration-200"
+            className="inline-flex items-center gap-2 bg-card text-foreground hover:bg-secondary px-8 py-4 rounded-md font-medium transition-all duration-200"
           >
             Skontaktuj się
             <ArrowRight className="w-5 h-5" />

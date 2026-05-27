@@ -41,7 +41,7 @@ const PageHero = ({
         {/* Content */}
         <div className="flex mx-2 items-center justify-center w-full">
           <div
-            className={`relative z-10 container-custom rounded-3xl ${isBacgkgroundForTextDark ? "bg-black/30" : ""} mx-auto`}
+            className={`relative z-10 container-custom rounded-3xl ${isBacgkgroundForTextDark ? "bg-[#23231f]/30" : ""} mx-auto`}
           >
             <div className="px-4 md:px-8 py-4 m-4">
               <div className="max-w-2xl">

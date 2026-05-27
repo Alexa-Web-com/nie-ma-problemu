@@ -8,7 +8,7 @@ import { cn, extractImageNameFromPath } from "../lib/utils";
 
 const minSwipeDistance = 50;
 
-const ImageGallery = ({images}: {images: string[]}) => {
+const ImageGallery = ({ images, caption }: { images: string[], caption?: string }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -159,7 +159,7 @@ const ImageGallery = ({images}: {images: string[]}) => {
                 className={cn(
                   "relative aspect-square overflow-hidden rounded-md transition-all duration-200",
                   currentIndex === index
-                    ? "ring-2 ring-primary ring-offset-2 ring-offset-background opacity-100"
+                    ? "ring-2 ring-accent ring-offset-2 ring-offset-background opacity-100"
                     : "opacity-60 hover:opacity-100",
                 )}
                 aria-label={`Pokaż ${image}`}
@@ -175,6 +175,8 @@ const ImageGallery = ({images}: {images: string[]}) => {
               </button>
             ))}
           </div>
+
+          {caption && <p className="text-center  text-muted-foreground mt-4 italic">{caption ? `Materiały fotograficzne w tej sekcji stanowią własność marek: ${caption}.` : ""}</p>}
 
           {/* Keyboard navigation hint */}
           <p className="text-center text-muted-foreground text-sm mt-6 hidden md:block">
