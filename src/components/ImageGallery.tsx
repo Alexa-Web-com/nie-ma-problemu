@@ -176,7 +176,7 @@ const ImageGallery = ({ images, caption }: { images: string[], caption?: string 
             ))}
           </div>
 
-          {caption && <p className="text-center text-xs md:text-sm text-muted-foreground mt-4 italic">{caption ? `Materiały fotograficzne w tej sekcji stanowią własność marek: ${caption}.` : ""}</p>}
+          {caption && <p className="text-center text-sm text-muted-foreground mt-4 italic">{caption ? `Materiały fotograficzne w tej sekcji stanowią własność marek: ${caption}.` : ""}</p>}
 
           {/* Keyboard navigation hint */}
           <p className="text-center text-muted-foreground text-sm mt-6 hidden md:block">
