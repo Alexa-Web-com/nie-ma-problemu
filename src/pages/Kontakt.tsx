@@ -108,7 +108,7 @@ const Kontakt = () => {
                     <Instagram className="w-5 h-5" />
                   </a>
                   <a
-                    href="https://youtube.com"
+                    href="https://youtube.com/@niemaproblemugdynia"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"

@@ -97,7 +97,7 @@ const ImageGallery = ({ images, caption }: { images: string[], caption?: string 
         {hint === "klamki" && (
           <button
             onClick={() => navigate("/otwieraj/otwieraj-galeria-5")}
-            className="fixed bottom-4 right-4 md:right-8 z-50 flex items-center gap-2 bg-background/80 backdrop-blur-sm text-primary hover:text-foreground hover:bg-background px-3 py-2 rounded-full shadow-lg transition-colors"
+            className="fixed bottom-4 right-4 md:right-8 z-50 flex items-center gap-2 bg-background/80 backdrop-blur-sm text-accent hover:text-foreground hover:bg-background px-3 py-2 rounded-full shadow-lg transition-colors"
           >
             <DoorClosed className="w-5 h-5" />
             <span>Pamiętaj o klamkach</span>
@@ -176,7 +176,7 @@ const ImageGallery = ({ images, caption }: { images: string[], caption?: string 
             ))}
           </div>
 
-          {caption && <p className="text-center  text-muted-foreground mt-4 italic">{caption ? `Materiały fotograficzne w tej sekcji stanowią własność marek: ${caption}.` : ""}</p>}
+          {caption && <p className="text-center text-xs md:text-sm text-muted-foreground mt-4 italic">{caption ? `Materiały fotograficzne w tej sekcji stanowią własność marek: ${caption}.` : ""}</p>}
 
           {/* Keyboard navigation hint */}
           <p className="text-center text-muted-foreground text-sm mt-6 hidden md:block">
